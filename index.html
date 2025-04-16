@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" type="image/x-icon" href="">
-  <title>Stylish Visiting Card</title>
+  <title>Khetrabilasha Visiting Card</title>
   <style>
     body {
       background: #f3f4f6;
@@ -17,88 +16,102 @@
     }
 
     .card {
-      background: linear-gradient(135deg, #ffffff, #fef2f2);
+      background: white;
       width: 650px;
-      height: 350px;
+      height: 300px;
       border-radius: 20px;
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
       display: flex;
-      align-items: center;
-      justify-content: start;
-      padding: 30px;
-      transition: transform 0.2s ease;
-      position: relative;
       overflow: hidden;
       border: 3px solid #fca5a5;
     }
 
-    .card::before {
-      content: "";
-      position: absolute;
-      top: -60px;
-      right: -60px;
-      width: 200px;
-      height: 200px;
-      background: #f87171;
-      border-radius: 50%;
-      opacity: 0.2;
-    }
-
-    .profile {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 5px solid #fb7185;
-      object-fit: cover;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-      margin-right: 30px;
-    }
-
-    .info {
-      color: #333;
-      flex: 1;
-    }
-
-    .info h2 {
-      margin: 0 0 10px;
-      font-size: 28px;
-      color: #e11d48;
-    }
-
-    .info p {
-      margin: 5px 0;
-      font-size: 16px;
-    }
-
-    .info strong {
-      color: #7c3aed;
-    }
-
-    .tagline {
-      font-style: italic;
-      color: #f59e0b;
-      margin-top: 10px;
-      font-size: 15px;
-    }
-
-    .products {
+    .left-side {
+      width: 30%;
+      background: linear-gradient(to bottom, #0f172a, #1e293b);
       display: flex;
-      gap: 10px;
-      margin-top: 15px;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      flex-direction: column;
     }
 
-    .products img {
-      width: 65px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 10px;
+    .brand-block {
+      text-align: center;
+    }
+
+    .logo-small {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #fff;
+      padding: 5px;
       border: 2px solid #fcd34d;
-      transition: transform 0.3s ease;
+      margin-bottom: 10px;
     }
 
-    .products img:hover {
-      transform: scale(1.2);
+    .brand-text h2 {
+      font-size: 18px;
+      color: #fcd34d;
+      margin: 0;
     }
+
+    .brand-text h4 {
+      font-size: 14px;
+      color: #fef2f2;
+      margin: 5px 0 0 0;
+    }
+
+    .right-side {
+  width: 70%;
+  background: linear-gradient(135deg, #fffefc, #fff1f2); /* Light pinkish gradient */
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-2px);
+}
+
+.info-item .icon {
+  background: #fcd34d;
+  color: #1e293b;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.info-item span.text {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
 
     .controls {
       margin-bottom: 20px;
@@ -128,25 +141,40 @@
 </div>
 
 <div class="card" id="card">
-  <img src="logo2.png" alt="Profile" class="profile" />
-  <div class="info">
-    <h2>Khetrabilasha Products</h2>
-    <h3 style="color: black;">Sukanta Behera</h3>
-    <!-- <p><strong>Owner:</strong> Babula Behera</p> -->
-    <p><strong>Location:</strong> Bhubaneswar, Odisha</p>
-    <p style="margin-left: 77px;"><strong></strong>     Makundadaspur,Balipatna</p>
-    <p><strong>Contact:</strong> +91 93374 05868</p>
-    <p><strong>Website:</strong> khetrabilashaproduct.github.io</p>
-    <p id="dynamicTagline" class="tagline"></p>
-    <div class="products">
-      <img src="door.jpg" alt="Door 1">
-      <img src="product.png" alt="Planter 1">
-      <img src="product2.jpg" alt="Frame 1">
-      <img src="chuli.png" alt="Door 1">
-      <img src="kunda.png" alt="Planter 1">
-      <!-- <img src="product2.jpg" alt="Frame 1"> -->
+  <div class="left-side">
+    <div class="brand-block">
+      <img src="logo2.png" alt="Logo" class="logo-small" />
+      <div class="brand-text">
+        <h2>Khetrabilasha Products</h2>
+        <h4>Sukanta Behera</h4>
+      </div>
     </div>
   </div>
+
+  <div class="right-side">
+    <div class="info">
+      <div class="info-item">
+        <span class="icon">📍</span>
+        <span class="text">Bhubaneswar, Odisha</span>
+      </div>
+      <div class="info-item">
+        <span class="icon">🏡</span>
+        <span class="text">Makundadaspur, Balipatna</span>
+      </div>
+      <div class="info-item">
+        <span class="icon">☎️</span>
+        <span class="text">+91 93374 05868</span>
+      </div>
+      <div class="info-item">
+        <span class="icon">🌐</span>
+        <span class="text">khetrabilashaproduct.github.io</span>
+      </div>
+      <div class="info-item">
+        <span class="icon">✉️</span>
+        <span class="text">khetrabilasha@gmail.com</span>
+      </div>
+    </div>
+    
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -159,32 +187,6 @@
       link.click();
     });
   }
-
-  // Typing tagline effect
-  const taglineText = "PLY & FRP Doors, Window & Door Frames, WPC & More for Every Beautiful Home";
-  let index = 0;
-  function typeEffect() {
-    if (index < taglineText.length) {
-      document.getElementById("dynamicTagline").textContent += taglineText.charAt(index);
-      index++;
-      setTimeout(typeEffect, 50);
-    }
-  }
-  typeEffect();
-
-  // Tilt effect on mouse move
-  const card = document.getElementById("card");
-  card.addEventListener("mousemove", (e) => {
-    const { offsetWidth: width, offsetHeight: height } = card;
-    let { offsetX: x, offsetY: y } = e;
-    let rotateY = (x / width - 0.5) * 15;
-    let rotateX = (0.5 - y / height) * 15;
-    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  });
-
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = `rotateX(0deg) rotateY(0deg)`;
-  });
 </script>
 
 </body>
